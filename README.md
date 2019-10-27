@@ -1,6 +1,6 @@
 # Kubernetes custom scheduler
 
-## Replicate current error
+## Schedule task in minikube
 
 Download, install minikube and run:
 
@@ -23,7 +23,7 @@ Create image:
 Create deployment:
 
 ```bash
-./createSchedulerDeployment2.sh
+./createSchedulerDeployment.sh
 ```
 
 Check all in minikube:
@@ -32,8 +32,21 @@ Check all in minikube:
 kubectl get all --namespace=kube-system
 ```
 
-Check error in scheduler pod in <kube-scheduler-name> insert name of scheduler pod:
+Go to testTasks directory:
 
 ```bash
-kubectl logs <kube-scheduler-name> --namespace=kube-system
+cd testTasks
 ```
+Create test pod:
+
+```bash
+./createRedisPod.sh
+```
+
+Check if pod is being created:
+
+```bash
+kubectl get pods
+```
+
+
