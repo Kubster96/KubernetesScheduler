@@ -5,7 +5,7 @@
 Download, install minikube and run:
 
 ```bash
-minikube start
+minikube start --kubernetes-version v1.12.0
 ```
 
 Run command:
@@ -80,5 +80,12 @@ Check if pod is being created:
 ```bash
 kubectl get pods
 ```
+
+## Start metrics server
+
+```bash
+kubectl apply -f metrics-server/deploy/1.8+/
+```
+
 
 

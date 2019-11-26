@@ -43,9 +43,6 @@ spec:
       - name: my-scheduler
         image: my-scheduler
         imagePullPolicy: Never
-        resources:
-          requests:
-            cpu: '0.1'
         securityContext:
           privileged: false
         volumeMounts: []
